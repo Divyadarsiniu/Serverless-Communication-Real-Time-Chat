@@ -11,10 +11,16 @@
 
 This project demonstrates a **100% Serverless, Event-Driven Real-Time Communication Platform** on **Amazon Web Services (AWS)** and deployed on **free modern cloud platforms (Vercel & Render)**. It replaces traditional stateful web servers (e.g., Express.js with Socket.io running 24/7 on EC2 instances) with managed serverless cloud primitives that scale automatically, require zero server maintenance, and incur **$0.00 idle costs**.
 
-### 🌐 Live Public Cloud Deployment Links
-- **Live Production App (Vercel):** [https://frontend-pied-eta-67.vercel.app](https://frontend-pied-eta-67.vercel.app)
-- **GitHub Repository:** [https://github.com/Divyadarsiniu/Serverless-Communication-Real-Time-Chat](https://github.com/Divyadarsiniu/Serverless-Communication-Real-Time-Chat)
-- **Free Cloud Backend Support:** Pre-configured with [`render.yaml`](file:///C:/Users/admin/Desktop/Serverless-Communication-Real-Time-Chat/render.yaml) and [`backend/server.py`](file:///C:/Users/admin/Desktop/Serverless-Communication-Real-Time-Chat/backend/server.py) for 1-click deployment on [Render.com](https://render.com).
+### 🌐 Live Cloud Deployment Links & Dashboard URLs
+
+| Service / Resource | Role in Architecture | Live Cloud Destination Link |
+| :--- | :--- | :--- |
+| **Vercel (Production Frontend)** | React SPA / Global Edge CDN | **[https://frontend-pied-eta-67.vercel.app](https://frontend-pied-eta-67.vercel.app)** |
+| **Vercel Dashboard** | Project Management & CI/CD | **[https://vercel.com/divya-darsinius-projects/frontend](https://vercel.com/divya-darsinius-projects/frontend)** |
+| **GitHub Repository** | Source Control & Git Origin | **[https://github.com/Divyadarsiniu/Serverless-Communication-Real-Time-Chat](https://github.com/Divyadarsiniu/Serverless-Communication-Real-Time-Chat)** |
+| **Render (Backend Blueprint)** | Real-Time WebSocket & REST Service | **[https://render.com/deploy?repo=https://github.com/Divyadarsiniu/Serverless-Communication-Real-Time-Chat](https://render.com/deploy?repo=https://github.com/Divyadarsiniu/Serverless-Communication-Real-Time-Chat)** |
+| **Render Blueprint Console** | Instance Management | **[https://dashboard.render.com/blueprints](https://dashboard.render.com/blueprints)** |
+
 
 The system has been engineered, hardened, and visually redesigned into **Yapper**—a modern, futuristic communication platform with its own distinctive identity:
 - **Unique Visual Identity ("Yapper"):** Replaces conventional chat bubble clones (Telegram/WhatsApp/Discord) with a **Live Communication Canvas** based on connection nodes, flowing signals, and live presence.
@@ -260,6 +266,23 @@ All infrastructure is defined in [`infrastructure/template.yaml`](file:///C:/Use
 4. The script provisions all resources, sets `VITE_USE_MOCK=false` in [`frontend/.env`](file:///C:/Users/admin/Desktop/Serverless-Communication-Real-Time-Chat/frontend/.env), and populates your live WebSocket URL (`wss://...`).
 5. Open two separate browsers/devices. Sign up real Cognito accounts.
 6. The Navbar displays `🟢 LIVE AWS`, and messages travel through AWS API Gateway, Lambda, and DynamoDB in real time!
+
+### Part 3: Live Cloud Demonstration (Vercel Frontend + Render Backend)
+1. **Access the Live Production Frontend on Vercel:**
+   - Open **[https://frontend-pied-eta-67.vercel.app](https://frontend-pied-eta-67.vercel.app)** on your laptop, phone, or tablet.
+   - The app loads globally from Vercel's edge CDN with HTTPS and zero installation required.
+   - Toggle Day / Night mode and test the interactive hero network canvas.
+2. **Deploy the Real-Time Backend on Render (1-Click):**
+   - Click 👉 **[Deploy Backend on Render](https://render.com/deploy?repo=https://github.com/Divyadarsiniu/Serverless-Communication-Real-Time-Chat)**.
+   - Sign in with your GitHub account (`Divyadarsiniu`).
+   - Render automatically reads [`render.yaml`](file:///C:/Users/admin/Desktop/Serverless-Communication-Real-Time-Chat/render.yaml) and provisions the Python FastAPI & WebSocket Web Service.
+   - Once provisioned, Render gives you a public backend domain (e.g. `https://yapper-backend.onrender.com` and `wss://yapper-backend.onrender.com/ws`).
+3. **Connect Frontend to Backend:**
+   - In your [Vercel Dashboard](https://vercel.com/divya-darsinius-projects/frontend/settings/environment-variables), add:
+     - `VITE_USE_MOCK = false`
+     - `VITE_WS_API_URL = wss://<your-render-app>.onrender.com/ws`
+     - `VITE_REST_API_URL = https://<your-render-app>.onrender.com`
+   - Your frontend on Vercel will now communicate in real time across the globe through your Render backend!
 
 ---
 
