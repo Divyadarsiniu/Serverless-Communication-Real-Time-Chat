@@ -342,3 +342,5 @@ All supporting documentation is available in the [`docs/`](file:///C:/Users/admi
 - [`docs/testing.md`](file:///C:/Users/admin/Desktop/Serverless-Communication-Real-Time-Chat/docs/testing.md): Full test matrix and multi-device procedures.
 - [`docs/viva-questions.md`](file:///C:/Users/admin/Desktop/Serverless-Communication-Real-Time-Chat/docs/viva-questions.md): 38 Viva Voce questions & answers (including Q16 on read receipt lifecycle and Q17 on caller verification).
 - [`docs/project-report.md`](file:///C:/Users/admin/Desktop/Serverless-Communication-Real-Time-Chat/docs/project-report.md): Formal 23-section Academic Project Report.
+- [`docs/presentation-slides.md`](file:///C:/Users/admin/Desktop/Serverless-Communication-Real-Time-Chat/docs/presentation-slides.md): Complete 16-slide academic presentation deck with slide layouts, word-for-word speaker script, technical keywords, and anticipated examiner questions.
+
