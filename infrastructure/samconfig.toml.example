@@ -1,0 +1,19 @@
+# SAM CLI Configuration Example
+version = 0.1
+
+[default]
+[default.global.parameters]
+stack_name = "serverless-realtime-chat"
+
+[default.build.parameters]
+cached = true
+parallel = true
+
+[default.deploy.parameters]
+capabilities = "CAPABILITY_IAM CAPABILITY_AUTO_EXPAND"
+confirm_changeset = true
+resolve_s3 = true
+s3_prefix = "serverless-realtime-chat"
+region = "us-east-1"
+parameter_overrides = "EnvironmentName=\"dev\""
+image_repositories = []

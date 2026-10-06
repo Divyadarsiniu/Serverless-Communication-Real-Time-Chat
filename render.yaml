@@ -1,0 +1,25 @@
+services:
+  # 1. Backend Web Service: Real-Time WebSocket & REST Server on Render Free Tier
+  - type: web
+    name: yapper-realtime-backend
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.server:app --host 0.0.0.0 --port $PORT
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+
+  # 2. Frontend Static Site: React SPA on Render Free Tier
+  - type: web
+    name: yapper-realtime-frontend
+    runtime: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    plan: free
+    autoDeploy: true
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
