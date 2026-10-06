@@ -9,7 +9,12 @@
 
 ## 1. Executive Summary
 
-This project demonstrates a **100% Serverless, Event-Driven Real-Time Communication Platform** on **Amazon Web Services (AWS)**. It replaces traditional stateful web servers (e.g., Express.js with Socket.io running 24/7 on EC2 instances) with managed serverless cloud primitives that scale automatically, require zero server maintenance, and incur **$0.00 idle costs**.
+This project demonstrates a **100% Serverless, Event-Driven Real-Time Communication Platform** on **Amazon Web Services (AWS)** and deployed on **free modern cloud platforms (Vercel & Render)**. It replaces traditional stateful web servers (e.g., Express.js with Socket.io running 24/7 on EC2 instances) with managed serverless cloud primitives that scale automatically, require zero server maintenance, and incur **$0.00 idle costs**.
+
+### 🌐 Live Public Cloud Deployment Links
+- **Live Production App (Vercel):** [https://frontend-pied-eta-67.vercel.app](https://frontend-pied-eta-67.vercel.app)
+- **GitHub Repository:** [https://github.com/Divyadarsiniu/Serverless-Communication-Real-Time-Chat](https://github.com/Divyadarsiniu/Serverless-Communication-Real-Time-Chat)
+- **Free Cloud Backend Support:** Pre-configured with [`render.yaml`](file:///C:/Users/admin/Desktop/Serverless-Communication-Real-Time-Chat/render.yaml) and [`backend/server.py`](file:///C:/Users/admin/Desktop/Serverless-Communication-Real-Time-Chat/backend/server.py) for 1-click deployment on [Render.com](https://render.com).
 
 The system has been engineered, hardened, and visually redesigned into **Yapper**—a modern, futuristic communication platform with its own distinctive identity:
 - **Unique Visual Identity ("Yapper"):** Replaces conventional chat bubble clones (Telegram/WhatsApp/Discord) with a **Live Communication Canvas** based on connection nodes, flowing signals, and live presence.
